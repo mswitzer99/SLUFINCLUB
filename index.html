@@ -1,59 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SLU Finance Club</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--blue:#0f2a5f;--bg:#f3f4f6;--card:#ffffff;--muted:#6b7280}
+    html,body{margin:0;padding:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:#111827}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{max-width:900px;background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:32px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center}
+    h1{font-size:clamp(28px,4vw,40px);margin:0 0 12px;color:var(--blue);font-weight:800}
+    .lead{font-size:clamp(16px,2.4vw,20px);color:#374151;margin:0 0 24px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;text-align:left}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    .tile{background:#eef2ff;border-radius:12px;padding:16px}
+    .tile h3{margin:0 0 8px;color:var(--blue);font-size:18px}
+    .tile p{margin:0;color:#374151;font-size:15px;line-height:1.45}
+    .section{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin:0 0 20px;text-align:left}
+    .section h2{margin:0 0 10px;color:var(--blue);font-size:22px;text-align:center}
+    ul{margin:0;padding-left:18px}
+    li{margin:8px 0;color:#374151}
+    .meta{font-weight:600;color:#1f2937;margin:8px 0}
+    .contact{color:var(--muted);font-size:14px;margin:0 0 16px}
+    .disc{color:var(--muted);font-size:12px;font-style:italic;line-height:1.5;text-align:left}
+    .badge{display:inline-block;background:#e5e7eb;border-radius:999px;padding:6px 10px;font-size:12px;color:#374151;margin-bottom:10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{background:#e5e7eb;border-radius:999px;padding:6px 10px;font-size:12px;color:#374151}
+    a{color:#0f2a5f;text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+  </style>
 </head>
-<body class="bg-gray-100 font-sans leading-relaxed">
-  <div class="flex items-center justify-center min-h-screen p-6">
-    <div class="bg-white shadow-xl rounded-2xl p-8 max-w-2xl text-center border border-gray-200">
-      <!-- Header -->
-      <h1 class="text-4xl font-bold text-blue-900 mb-4">Join the SLU Finance Club</h1>
-      <p class="text-lg text-gray-700 mb-6">
-        A community for aspiring leaders in finance. Learn, network, and gain real-world investment experience. 
+<body>
+  <div class="wrap">
+    <main class="card" role="main">
+      <span class="badge">Student-Led • All Levels Welcome</span>
+      <h1>Unlock Your Future with the SLU Finance Club</h1>
+      <p class="lead">
+        Hands-on experience, real networking, and opportunities you can add to your résumé now — whether you’re brand new to finance or ready for advanced research.
       </p>
 
-      <!-- Highlights -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-left">
-        <div class="p-4 bg-blue-50 rounded-xl">
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">📈 Leadership & Experience</h3>
-          <p class="text-gray-700">Take on leadership roles, guide teams, and grow as a professional.</p>
+      <section class="grid" aria-label="Value points">
+        <div class="tile">
+          <h3>📈 Résumé-Building Experience</h3>
+          <p>Work on investment research, present pitches, and compete — get concrete wins and stories for interviews.</p>
         </div>
-        <div class="p-4 bg-blue-50 rounded-xl">
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">🏆 Competitions</h3>
-          <p class="text-gray-700">Represent SLU in national investment and research competitions.</p>
+        <div class="tile">
+          <h3>🌐 Expand Your Network</h3>
+          <p>Meet peers, alumni, and professionals who open doors to internships and full-time roles.</p>
         </div>
-        <div class="p-4 bg-blue-50 rounded-xl">
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">🔍 Research Projects</h3>
-          <p class="text-gray-700">Work on customized projects aligned with your interests — equities, fixed income, alternatives, and more.</p>
+        <div class="tile">
+          <h3>🧑‍🎓 You Pick the Topics</h3>
+          <p>Each week’s agenda and guest speakers are shaped by what members want to learn — from fundamentals to advanced strategies.</p>
+          <div class="chips">
+            <span class="chip">Equity Research</span>
+            <span class="chip">Valuation</span>
+            <span class="chip">Macro & Rates</span>
+            <span class="chip">Risk</span>
+            <span class="chip">Quant Basics</span>
+            <span class="chip">Career Prep</span>
+          </div>
         </div>
-        <div class="p-4 bg-blue-50 rounded-xl">
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">🤝 Networking & Learning</h3>
-          <p class="text-gray-700">Build your network with peers, alumni, and professionals across the finance industry.</p>
+        <div class="tile">
+          <h3>🚀 Leadership Opportunities</h3>
+          <p>Own projects, lead small groups, and strengthen the leadership section of your résumé.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Guest Speakers -->
-      <div class="bg-gray-50 border rounded-xl p-6 mb-6">
-        <h2 class="text-2xl font-bold text-blue-900 mb-3">Exclusive Guest Speakers</h2>
-        <ul class="text-gray-700 space-y-3 text-left">
-          <li>💼 <strong>Mott Family Office</strong> — a renowned single-family office managing billions, offering insights and mentorship.</li>
-          <li>📊 A <strong>Billion-Dollar Hedge Fund Manager</strong> — sharing his journey from mutual funds to hedge funds to IPO’ing an ETF.</li>
+      <section class="section" aria-label="Speakers">
+        <h2>Exclusive Guest Speakers</h2>
+        <ul>
+          <li><strong>Mott Family Office</strong> — a renowned single-family office managing billions; mentorship and training in investment research.</li>
+          <li><strong>Billion-Dollar Hedge Fund Manager</strong> — journey from mutual fund to hedge fund to IPO’ing an ETF.</li>
         </ul>
-      </div>
+      </section>
 
-      <!-- Meeting Info -->
-      <p class="font-semibold text-gray-800 mb-2">📍 Weekly Meetings: Wednesdays @ 6 PM | DSH 171</p>
-      <p class="text-sm text-gray-500 mb-6">Contact: matthew.scheiwer@slu.edu</p>
+      <p class="meta">📍 Wednesdays @ 6 PM · DSH 171</p>
+      <p class="contact">Contact: matthew.scheiwer@slu.edu</p>
 
-      <!-- Disclaimer -->
-      <p class="text-xs text-gray-500 italic">
-        Disclaimer: The Finance Club is a low-risk, student-led organization designed for you to explore different opportunities,
-        gain exposure to investing, and discover which career paths interest you most. It’s a space to learn, grow, and experiment without pressure.
+      <!-- Polished Disclaimer -->
+      <p class="disc">
+        The Finance Club is a low-risk, student-led organization where collaboration comes first. 
+        We welcome students who are new to investing as well as those with professional experience and internship offers in banking, private equity, and corporate development. 
+        Bring your questions and ideas — the club is designed for us to learn from each other and gain real experience together. <br><br>
+        Your time commitment is completely up to you: attend as little as one meeting a semester, or invest hours each week in research and presentations. 
+        We’re happy to have anyone join or simply stop by for a meeting to check it out. <br><br>
+        Stay connected by following us on 
+        <a href="https://www.instagram.com/slufinanceclub/" target="_blank">Instagram</a> 
+        or signing up for text reminders about meetings and guest speakers. 
+        We’ll only text once per week at most, to share the location and topic of that week’s meeting.
       </p>
-    </div>
+    </main>
   </div>
 </body>
 </html>
